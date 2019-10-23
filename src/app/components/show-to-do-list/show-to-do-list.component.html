@@ -1,0 +1,9 @@
+<ul class="list-group">
+    <li *ngFor="let task of list; let i = index" class="task list-group-item list-group-item-info d-flex justify-content-between align-items-center mb-2">
+        <span>{{ task }}</span>
+        <div>
+            <button (click)="markTaskDone(i)" [attr.data-index]="i" class="btn btn-sm btn-success mr-2">Done</button>
+            <button (click)="deleteTask(i)" [attr.data-index]="i" class="btn btn-sm btn-danger">Delete</button>
+        </div>
+    </li>
+</ul>
